@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   // const Answer({ Key? key }) : super(key: key);
-  var answerText;
-  var answerQ;
+  final answerText;
+  final answerQ;
   Answer(this.answerQ, this.answerText);
 
   @override
