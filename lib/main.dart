@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:quiz_app/Questions.dart';
-import 'package:quiz_app/answer.dart';
+import 'package:quiz_app/quiz.dart';
+import 'package:quiz_app/result.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,52 +11,70 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final _questions = const [
+    {
+      'qn': 'what is your country name?',
+      'ans': [
+        {'text': 'Nepal', 'score': 1},
+        {'text': 'India', 'score': 0},
+        {'text': 'Kathmandu', 'score': 0},
+        {'text': 'USA', 'score': 0},
+      ]
+    },
+    {
+      'qn': 'which language does Flutter use?',
+      'ans': [
+        {'text': 'Python', 'score': 0},
+        {'text': 'C++', 'score': 0},
+        {'text': 'Dart', 'score': 1},
+        {'text': 'Js', 'score': 0},
+      ]
+    },
+    {
+      'qn': 'Flutter use for',
+      'ans': [
+        {'text': 'Web', 'score': 0},
+        {'text': 'App', 'score': 0},
+        {'text': 'Desktop', 'score': 0},
+        {'text': 'All of the Above', 'score': 1},
+      ]
+    },
+  ];
   var _questionIndex = 0;
+  var _totalscore = 0;
 
-  void _ans() {
+  void _restart() {
+    setState(() {
+      _questionIndex = 0;
+      _totalscore = 0;
+    });
+  }
+
+  void _ans(int score) {
+    _totalscore += score;
+
     setState(() {
       _questionIndex++;
     });
     print(_questionIndex);
+    if (_questionIndex < _questions.length) {
+      print("We have more questions!");
+    } else {
+      print('No more questions left');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    //  List< Map< String,List >>
-    var questions =
-        // var questions =
-        [
-      {
-        'qn': 'what is your country name?',
-        'ans': ['Nepal', 'India', 'kathmandu', 'USA']
-      },
-      {
-        'qn': 'which language does Flutter use?',
-        'ans': ['Python', 'C++', 'Dart', 'Java']
-      },
-      {
-        'qn': 'Flutter use for',
-        'ans': ['App', 'Web', 'Desktop', 'All of the above']
-      },
-    ];
-
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("Quiz App"),
-          ),
-          body: Column(
-            children: [
-              Expanded(
-                  child: Center(
-                      child: Question(
-                questions[_questionIndex]['qn'].toString(),
-              ))),
-              ...(questions[_questionIndex]['ans'] as List<String>)
-                  .map((e) => Answer(_ans, e))
-                  .toList(),
-            ],
-          )),
+        appBar: AppBar(
+          title: Text("Quiz App"),
+        ),
+        body: (_questionIndex < _questions.length)
+            ? Quiz(_questions, _questionIndex, _ans)
+            : Result(_totalscore, _restart),
+      ),
     );
   }
 }
