@@ -1,10 +1,13 @@
-# quiz_app
+# Quiz APP 
+ This is a simple one screen quiz app.
 
-This is quiz app 
+## [View in web]()
+ ### Whats implemented
 
-quiz questions :
-![Questions](./assets/front.png)
+- playing with widgets and implementing logic
 
-Result Page:
+## Some snapshot
 
-![Result](./assets/result.png)
+<img height="480px" src="assets/front.png"> <img height="480px" src="assets/result.png">
+ 
+# Thank you for visiting.

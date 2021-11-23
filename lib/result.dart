@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
-  // const Result({Key? key}) : super(key: key);
 
   final int resultScore;
   var restart;

@@ -9,7 +9,7 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width * 0.75,
       height: 60,
       margin: EdgeInsets.only(bottom: 20),
       child: ElevatedButton(
