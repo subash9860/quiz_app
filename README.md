@@ -1,7 +1,7 @@
 # Quiz APP 
  This is a simple one screen quiz app.
 
-## [View in web]()
+## [View in web](https://subash9860.github.io/quiz_app/)
  ### Whats implemented
 
 - playing with widgets and implementing logic
