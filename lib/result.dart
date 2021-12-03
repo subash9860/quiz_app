@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
-
   final int resultScore;
   var restart;
   Result(this.resultScore, this.restart);
@@ -20,15 +19,15 @@ class Result extends StatelessWidget {
           alignment: Alignment.center,
           margin: EdgeInsets.fromLTRB(30, 150, 30, 30),
           height: 300,
-          decoration: BoxDecoration(color: Colors.teal),
+          decoration: BoxDecoration(color: Colors.blue),
           child: SizedBox(
             child: Center(
               child: Text(
                 'Well Done, You score $resultScore.',
                 style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
                 textAlign: TextAlign.center,
               ),
             ),
