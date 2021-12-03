@@ -2,7 +2,9 @@
  This is a simple one screen quiz app.
 
 ## [View in web](https://subash9860.github.io/quiz_app/)
-### Note: for bettter look in browser, make it size of 370 x 640 becuase it's only made for Mobile view only. [Click here for web view](https://subash9860.github.io/quiz_app/)
+
+### [Click here for web view](https://subash9860.github.io/quiz_app/)
+ Note: for bettter look in browser, make it size of 370 x 640 becuase it's only made for Mobile view only. 
 
  ### Whats implemented
 
