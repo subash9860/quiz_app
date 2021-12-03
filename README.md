@@ -4,7 +4,7 @@
 ## [View in web](https://subash9860.github.io/quiz_app/)
 
 ### [Click here for web view](https://subash9860.github.io/quiz_app/)
- Note: for bettter look in browser, make it size of 370 x 640 becuase it is only made for Mobile view only not for web view.
+ Note: for bettter look in browser, make it size of 370 x 640 becuase it is only made for Mobile view only, not for web view.
 
  ### Whats implemented
 
